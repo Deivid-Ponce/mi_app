@@ -10,6 +10,12 @@ php/debug.txt
 # Variables de entorno
 .env
 
+# PDFs generados
+pdf/
+
+# JavaScript ofuscado
+js_ofuscado/
+
 # Respaldos
 *.sql
 *.zip
