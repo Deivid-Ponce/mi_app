@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home-body">
+
+  <header class="topbar">
+    <div class="user-info">
+      <img src="img/user.png" class="user-photo">
+      <div>
+        <h3 id="nombreUsuario"></h3>
+        <p id="correoUsuario"></p>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <button id="menuBtn" class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <a href="#" onclick="cargarVista('perfil')">Mi perfil</a>
+        <a href="#" onclick="cargarVista('ajustes')">Configuración</a>
+        <a href="#" onclick="logout()">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Aquí se carga el contenido -->
+  <main id="contenido" class="main-content"></main>
+
+  <nav class="bottom-navbar">
+    <a href="#" onclick="cargarVista('inicio')" class="nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Inicio</span>
+    </a>
+    <a href="#" onclick="cargarVista('perfil')" class="nav-item">
+      <i class="fa-solid fa-user"></i>
+      <span>Perfil</span>
+    </a>
+    <a href="#" onclick="cargarVista('agenda')" class="nav-item">
+      <i class="fa-solid fa-calendar"></i>
+      <span>Agenda</span>
+    </a>
+    <a href="#" onclick="cargarVista('reportes')" class="nav-item">
+      <i class="fa-solid fa-chart-column"></i>
+      <span>Reportes</span>
+    </a>
+    <a href="#" onclick="cargarVista('mensajes')" class="nav-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Mensajes</span>
+    </a>
+    <a href="#" onclick="cargarVista('ajustes')" class="nav-item">
+      <i class="fa-solid fa-gear"></i>
+      <span>Ajustes</span>
+    </a>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!--Este codigo es para mostrar la credencial del usuario y la parte trasera muestra su idpersonal mediante codigo QR-->
+
+<div class="perfil-page">
+  <div class="card-container" id="credencialContainer">
+    <div class="card" id="credencialCard">
+      <!-- FRONTAL -->
+      <div class="card-side card-front">
+        <div class="card-header-perfil">
+          <img src="img/logo.png" class="sindicato-logo" alt="Logo">
+          <p class="sindicato-title">
+            SINDICATO UNICO DE SERVIDORES PUBLICOS DEL GOBIERNO DEL ESTADO DE NUEVO LEON
+          </p>
+        </div>
+
+        <div class="card-body-perfil">
+          <div class="profile-image-wrapper">
+            <img id="perfilUserImage" class="profile-image" src="img/user.png" alt="Foto usuario">
+          </div>
+
+          <div class="perfil-user-info">
+            <h2 id="perfilUserName" class="user-name">NOMBRE USUARIO</h2>
+            <p id="perfilMemberStatus" class="member-status">MIEMBRO ACTIVO</p>
+            <p id="perfilMemberNumber" class="member-number">00000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- REVERSO -->
+      <div class="card-side card-back">
+        <div class="card-header-suspe">
+          <p class="sindicato-title-suspe"></p>
+        </div>
+
+        <div class="card-body-suspe">
+          <div class="qr-wrapper-suspe">
+            <canvas id="qrcodePerfil"></canvas>
+          </div>
+
+          <div class="user-info-suspe">
+            <p class="user-name-suspe">RICARDO JAVIER CAVAZOS BALDERAS</p>
+            <p class="user-role-suspe">SECRETARIO GENERAL</p>
+          </div>
+
+          <div class="second-person-suspe">
+            <p class="user-name-suspe">FCA. BERENICE GONZALEZ VALDEZ</p>
+            <p class="user-role-suspe">SECRETARIA DE ORG Y AFILIACION</p>
+          </div>
+        </div>
+
+        <div class="card-footer-suspe"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>

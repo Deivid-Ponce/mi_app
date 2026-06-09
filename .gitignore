@@ -1,0 +1,28 @@
+# VS Code
+.vscode/
+
+# Configuración de BD
+php/conexión.php
+
+# Debug
+php/debug.txt
+
+# Variables de entorno
+.env
+
+# Respaldos
+*.sql
+*.zip
+*.rar
+
+# Logs
+*.log
+
+# Temporales
+*.tmp
+
+# Windows
+Thumbs.db
+
+# Mac
+.DS_Store

@@ -1,0 +1,36 @@
+<div class="ajustes-page">
+  <div class="ajustes-card">
+    <h2 class="ajustes-title">Ajustes de cuenta</h2>
+
+    <form id="formAjustes" class="ajustes-form">
+      <div class="ajustes-row">
+        <label for="ajustesLogin">Usuario</label>
+        <input type="text" id="ajustesLogin" readonly>
+      </div>
+
+      <div class="ajustes-row">
+        <label for="ajustesNombre">Nombre</label>
+        <input type="text" id="ajustesNombre" readonly>
+      </div>
+
+      <div class="ajustes-row">
+        <label for="ajustesEmail">Correo electrónico</label>
+        <input type="email" id="ajustesEmail" placeholder="Ingresa tu correo actual o nuevo">
+      </div>
+
+      <div class="ajustes-row">
+        <label for="ajustesPassword">Nueva contraseña</label>
+        <input type="password" id="ajustesPassword" placeholder="Deja vacío si no deseas cambiarla">
+      </div>
+
+      <div class="ajustes-row">
+        <label for="ajustesPassword2">Confirmar contraseña</label>
+        <input type="password" id="ajustesPassword2" placeholder="Confirma la nueva contraseña">
+      </div>
+
+      <button type="submit" class="btn-guardar-ajustes">Guardar cambios</button>
+
+      <p id="mensajeAjustes" class="mensaje-ajustes"></p>
+    </form>
+  </div>
+</div>

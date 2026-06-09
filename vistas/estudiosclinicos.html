@@ -1,0 +1,69 @@
+<div class="estudios-page">
+  <div class="estudios-header-card">
+    <h2 class="estudios-title">Pases Clínicos</h2>
+    <p class="estudios-subtitle">Selecciona a la persona para consultar sus estudios clínicos</p>
+  </div>
+
+  <div class="estudios-personas-card">
+    <h3>Personas relacionadas</h3>
+    <div id="listaPersonasClinicos" class="estudios-personas-list">
+      <div class="estudios-empty">Cargando personas...</div>
+    </div>
+  </div>
+
+  <div class="estudios-tabla-card">
+    <h3 id="tituloTablaClinicos">Estudios clínicos</h3>
+
+    <div class="estudios-table-responsive">
+      <table class="estudios-table">
+        <thead>
+          <tr>
+            <th>Estudio</th>
+            <th>Médico</th>
+            <th>Laboratorio</th>
+            <th>Fecha estudio</th>
+            <th>Vigencia</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tablaEstudiosClinicos">
+          <tr>
+            <td colspan="6" class="estudios-empty">Selecciona una persona para ver sus estudios clínicos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL LABORATORIO -->
+<div id="modalLaboratorio" class="modal-laboratorio-overlay">
+  <div class="modal-laboratorio-box">
+    <div class="modal-laboratorio-header">
+      <h3>Seleccionar laboratorio</h3>
+      <button type="button" class="modal-laboratorio-close" onclick="cerrarModalLaboratorio()">&times;</button>
+    </div>
+
+    <div class="modal-laboratorio-body">
+      <p id="modalLaboratorioTexto">
+        Seleccione el laboratorio para continuar con la descarga del pase.
+      </p>
+
+      <div class="modal-laboratorio-opciones">
+        <button type="button" class="btn-lab-opcion" onclick="seleccionarLaboratorio('MOREIRA')">
+          MOREIRA
+        </button>
+
+        <button type="button" class="btn-lab-opcion" onclick="seleccionarLaboratorio('BIOMED')">
+          BIOMED
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-laboratorio-footer">
+      <button type="button" class="btn-lab-cancelar" onclick="cerrarModalLaboratorio()">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>

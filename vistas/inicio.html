@@ -1,0 +1,344 @@
+<div class="inicio-bank-container">
+
+  <!-- HERO PRINCIPAL -->
+  <section class="inicio-bank-hero">
+    <div class="inicio-bank-hero-info">
+      <!--<span class="inicio-bank-label">SUSPE Servicios</span>-->
+
+      <h2>Mi credencial digital</h2>
+
+      <button type="button" class="inicio-bank-hero-btn" onclick="cargarVista('perfil')">
+        Ver credencial
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="inicio-bank-phone-card">
+      <div class="inicio-bank-phone">
+        <div class="inicio-bank-phone-notch"></div>
+        <div class="inicio-bank-phone-header"><img src="https://phpstack-1548792-5992674.cloudwaysapps.com/app/_lib/file/img/logo4blanco.png" alt="" style="width: 3.2vh;" style="height: 3.2vh;"></div>
+
+        <div class="inicio-bank-phone-user">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="inicio-bank-phone-line line-large"></div>
+        <div class="inicio-bank-phone-line"></div>
+        <div class="inicio-bank-phone-line line-small"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESOS RÁPIDOS -->
+  <section class="inicio-bank-section">
+    <div class="inicio-bank-title-row">
+      <div>
+        <h3>Accesos rápidos</h3>
+      </div>
+
+      <button type="button" class="inicio-bank-see-all" id="btnVerAccesos" onclick="toggleAccesosInicio()">
+          Ver todos
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+    <div class="inicio-bank-grid">
+
+      <button class="inicio-bank-action" onclick="cargarVista('usuario')">
+        <span class="inicio-bank-action-icon icon-blue">
+          <i class="fa-solid fa-user"></i>
+        </span>
+        <strong>Perfil</strong>
+        <small>Tus datos</small>
+      </button>
+
+      <button class="inicio-bank-action" onclick="cargarVista('organizacion')">
+        <span class="inicio-bank-action-icon icon-green">
+          <i class="fa-solid fa-sitemap"></i>
+        </span>
+        <strong>Organización</strong>
+        <small>Familiares</small>
+      </button>
+
+      <button class="inicio-bank-action" onclick="cargarVista('cajaahorro')">
+        <span class="inicio-bank-action-icon icon-gold">
+          <i class="fa-solid fa-piggy-bank"></i>
+        </span>
+        <strong>Caja</strong>
+        <small>Ahorro</small>
+      </button>
+
+      <button class="inicio-bank-action" onclick="cargarVista('recetasmedicas')">
+        <span class="inicio-bank-action-icon icon-red">
+          <i class="fa-solid fa-prescription-bottle-medical"></i>
+        </span>
+        <strong>Recetas</strong>
+        <small>Médicas</small>
+      </button>
+
+      <button class="inicio-bank-action" onclick="cargarVista('pasemedico')">
+        <span class="inicio-bank-action-icon icon-teal">
+          <i class="fa-solid fa-hospital"></i>
+        </span>
+        <strong>Pases</strong>
+        <small>Médicos</small>
+      </button>
+
+      <button class="inicio-bank-action" onclick="cargarVista('calendario')">
+        <span class="inicio-bank-action-icon icon-purple">
+          <i class="fa-solid fa-calendar-days"></i>
+        </span>
+        <strong>Calendario</strong>
+        <small>Digital</small>
+      </button>
+
+      <button class="inicio-bank-action acceso-extra" onclick="cargarVista('documentos')">
+      <span class="inicio-bank-action-icon icon-blue">
+        <i class="fa-solid fa-file-arrow-up"></i>
+      </span>
+      <strong>Documentos</strong>
+      <small>Archivos</small>
+    </button>
+
+    <button class="inicio-bank-action acceso-extra" onclick="cargarVista('contacto')">
+      <span class="inicio-bank-action-icon icon-green">
+        <i class="fa-solid fa-address-book"></i>
+      </span>
+      <strong>Contacto</strong>
+      <small>Directorio</small>
+    </button>
+
+    <button class="inicio-bank-action acceso-extra" onclick="cargarVista('ajustes')">
+      <span class="inicio-bank-action-icon icon-purple">
+        <i class="fa-solid fa-gear"></i>
+      </span>
+      <strong>Ajustes</strong>
+      <small>Cuenta</small>
+    </button>
+
+    </div>
+  </section>
+
+  <!-- AVISOS -->
+  <section class="inicio-bank-section">
+    <div class="inicio-bank-title-row">
+      <div>
+        <h3>Avisos importantes</h3>
+      </div>
+
+      <button type="button" class="inicio-bank-see-all" onclick="cargarVista('avisos')">
+        Ver todos
+      <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="inicio-bank-carousel">
+<!--
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_dia_trabajo')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>Día del Trabajo</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/dia_trabajo.png" alt="Día del Trabajo" loading="eager" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_batalla_puebla')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>Comunicado</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/batalla_puebla.png" alt="Comunicado" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+
+-->
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_prepa_abierta')">
+        <div class="inicio-bank-banner-info">
+          <span>Educación</span>
+          <h4>Preparatoria Abierta</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/preparatoria_abierta.png" alt="Preparatoria Abierta" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_regalo_madres')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>Regalo Madres</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/seleccion_regalo.png" alt="Regalo Madres" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_academico')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>EXCELENCIA ACADEMICA</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/excelencia_academica.png" alt="Excelencia Academica" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_asamblea')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>PLATAFORMA SUSPESERVICIOS</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/suspeservicios.png" alt="Suspe Servicios" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('aviso', 'aviso_caja_ahorro')">
+        <div class="inicio-bank-banner-info">
+          <span>Aviso</span>
+          <h4>CAJA DE AHORRO</h4>
+
+          <div class="inicio-bank-read-btn">
+            Leer más
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/caja_de_ahorro.png" alt="Caja Ahorro" loading="lazy" decoding="async">
+        </div>
+      </button>
+      
+
+    </div>
+
+    <div class="inicio-bank-dots">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="inicio-bank-section">
+    <div class="inicio-bank-title-row">
+      <div>
+        <h3>Próximos eventos</h3>
+      </div>
+    </div>
+
+    <div class="inicio-bank-carousel">
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('evento', 'bono_despensa')">
+        <div class="inicio-bank-banner-info">
+          <span>25 ABR · Evento</span>
+          <h4>Festejo niños</h4>
+
+
+          <div class="inicio-bank-read-btn">
+            Ver evento
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/festejo_niños.png" alt="Festejo niños" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('evento', 'vacaciones_marzo_1')">
+        <div class="inicio-bank-banner-info">
+          <span>11 MAY · Evento</span>
+          <h4>Festejo Madres</h4>
+
+
+          <div class="inicio-bank-read-btn">
+            Ver evento
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/festejo_madres.png" alt="Festejo Madres" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('evento', 'vacaciones_marzo_2')">
+        <div class="inicio-bank-banner-info">
+          <span>19 JUN · Evento</span>
+          <h4>Festejo Padres</h4>
+
+
+          <div class="inicio-bank-read-btn">
+            Ver evento
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/festejo_padres.png" alt="Festejo Padres" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+      <button class="inicio-bank-banner" onclick="abrirDetalleInicio('evento', 'festejo_ninos')">
+        <div class="inicio-bank-banner-info">
+          <span>31 JUL · Evento</span>
+          <h4>FESTEJO SECRETARIAS</h4>
+
+
+          <div class="inicio-bank-read-btn">
+            Ver evento
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="inicio-bank-banner-image">
+          <img class="inicio-img-skeleton" src="img/avisos/festejo_secretarias.png" alt="Festejo Secretarias" loading="lazy" decoding="async">
+        </div>
+      </button>
+
+    </div>
+  </section>
+
+</div>

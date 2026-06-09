@@ -1,0 +1,36 @@
+<!--Se hizo de prueba para el diseño del inicio del loggin-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <div class="card">
+      <h1>Bienvenido</h1>
+      <p id="bienvenida"></p>
+      <button id="cerrarSesion">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script>
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+    if (!usuario) {
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("bienvenida").textContent =
+        `Hola, ${usuario.nombre} (${usuario.correo})`;
+    }
+
+    document.getElementById("cerrarSesion").addEventListener("click", () => {
+      localStorage.removeItem("usuario");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

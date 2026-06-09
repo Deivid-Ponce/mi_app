@@ -1,0 +1,103 @@
+<div class="prueba-page">
+  <div class="prueba-card">
+    <div id="personaFotoInfo" class="persona-foto-info"></div>
+
+    <div class="foto-box">
+      <video id="videoPrueba" autoplay playsinline muted style="display:none;"></video>
+      <canvas id="canvasPreview" class="canvas-preview"></canvas>
+    </div>
+
+    <div class="acciones-prueba">
+      <button type="button" id="btnTomarFoto" class="btn-prueba">
+        Tomar foto
+      </button>
+
+      <button type="button" id="btnSubirFoto" class="btn-prueba btn-ok" style="display:none;">
+        Subir foto
+      </button>
+
+      <button type="button" id="btnCancelarFoto" class="btn-prueba btn-cancel" style="display:none;">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .prueba-page {
+    min-height: calc(100vh - 120px);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  .prueba-card {
+    width: 100%;
+    max-width: 460px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+  }
+
+  .persona-foto-info {
+    text-align: center;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .foto-box {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .canvas-preview {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .acciones-prueba {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn-prueba {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #8f002d;
+    color: #fff;
+    min-width: 130px;
+  }
+
+  .btn-ok {
+    background: #16a34a;
+  }
+
+  .btn-cancel {
+    background: #dc2626;
+  }
+
+  .btn-prueba:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+  }
+</style>

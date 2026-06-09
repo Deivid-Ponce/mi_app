@@ -1,0 +1,9 @@
+Options -Indexes
+
+<FilesMatch "^(conexion|session_check|validar_sesion|)\.php$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(env|ini|log|sql|bak|zip|tar|gz)$">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#782F40">
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="css/estilos.min.css?v=20260508">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+</head>
+
+<body class="login-body premium-login-body">
+
+  <header class="sc-header">
+    <div class="sc-header__inner">
+      <img src="img/logo.png" class="brand__logo" alt="Logo">
+    </div>
+
+    <div class="sc-header__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <defs>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(0,0,0,0.25)"/>
+          </filter>
+        </defs>
+
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,81 L0,81 Z" fill="#f5f1f3"></path>
+        <path
+          d="M0,40 C360,80 1080,0 1440,40"
+          fill="none"
+          stroke="#a8abac"
+          stroke-width="5"
+          filter="url(#shadow)"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </div>
+  </header>
+
+  <main class="premium-login-wrapper">
+    <div class="premium-login-brand">
+      <h1>Bienvenido</h1>
+    </div>
+
+    <div class="premium-login-card">
+      <form
+        id="formLogin"
+        class="premium-login-form"
+        autocomplete="on"
+        novalidate
+      >
+        <div class="premium-input-group">
+          <label for="usuario" class="sr-only">Usuario</label>
+
+          <div class="premium-input-wrap">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+
+            <input
+              type="text"
+              id="usuario"
+              name="usuario"
+              placeholder="Ingresa tu usuario"
+              autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
+              inputmode="text"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="premium-input-group">
+          <label for="password" class="sr-only">Contraseña</label>
+
+          <div class="premium-input-wrap">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              required
+            >
+
+            <button
+              type="button"
+              id="togglePassword"
+              class="premium-eye-btn"
+              aria-label="Mostrar contraseña"
+            >
+              <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="premium-login-options">
+          <label class="premium-remember">
+            <input type="checkbox" id="recordarme" name="recordarme" value="1">
+            <span>Recordarme</span>
+          </label>
+        </div>
+
+        <button type="submit" class="premium-login-btn" id="btnLogin">
+          <span>Iniciar sesión</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+
+        <p
+          id="mensaje"
+          class="premium-login-message"
+          role="alert"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="loginOverlay" class="login-overlay" aria-hidden="true">
+    <div class="login-overlay-content">
+      <div class="login-spinner"></div>
+      <h3 id="loginOverlayTitle">Bienvenido</h3>
+    </div>
+  </div>
+
+  <script src="js/login.min.js?v=20260602" defer></script>
+</body>
+</html>

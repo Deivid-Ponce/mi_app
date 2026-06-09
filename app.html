@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>App</title>
+  <link rel="stylesheet" href="css/estilos.css?v=202605097">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home-body">
+
+
+  <header class="topbar">
+    <div class="user-info">
+      <img src="img/user.png" class="user-photo" id="fotoUsuario">
+      <div>
+        <h3 id="nombreUsuario"></h3>
+        <p id="correoUsuario"></p>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <button id="menuBtn" class="menu-btn" type="button" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+
+  <aside id="sideMenu" class="side-menu">
+    <div class="side-menu-header">
+      <div class="side-menu-user">
+        <img src="img/user.png" class="side-user-photo" id="sideFotoUsuario">
+        <div class="side-user-data">
+          <h3 id="sideNombreUsuario">Usuario</h3>
+          <p id="sideCorreoUsuario">correo</p>
+        </div>
+      </div>
+
+      <button id="closeMenuBtn" class="close-menu-btn" type="button" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="side-menu-nav">
+  <a href="#" class="side-menu-item" data-vista="inicio">
+    <i class="fa-solid fa-house"></i>
+    <span>Inicio</span>
+  </a>
+
+  <a href="#" class="side-menu-item" data-vista="usuario">
+    <i class="fa-solid fa-user"></i>
+    <span>Mi perfil</span>
+  </a>
+
+  <a href="#" class="side-menu-item" data-vista="perfil">
+    <i class="fa-solid fa-id-card"></i>
+    <span>Credencial</span>
+  </a>
+
+  <a href="#" class="side-menu-item" data-vista="organizacion">
+    <i class="fa-solid fa-building"></i>
+    <span>Organizacion</span>
+  </a>
+
+  <div class="side-menu-group">
+    <button type="button" class="side-menu-item side-menu-toggle">
+      <span class="side-menu-left">
+        <i class="fa-solid fa-file-medical"></i>
+        <span>Servicios Medicos</span>
+      </span>
+      <i class="fa-solid fa-chevron-down side-menu-arrow"></i>
+    </button>
+
+    <div class="side-submenu">
+      <a href="#" class="side-submenu-item" data-vista="pasemedico">
+        Pase Especialista
+      </a>
+      <a href="#" class="side-submenu-item" data-vista="estudiosclinicos">
+        Pase Clinico
+      </a>
+      <a href="#" class="side-submenu-item" data-vista="recetasmedicas">
+        Receta Medica
+      </a>
+    </div>
+  </div>
+
+  <a href="#" class="side-menu-item" data-vista="cajaahorro">
+    <i class="fa-solid fa-piggy-bank"></i>
+    <span>Caja de ahorro</span>
+  </a>
+  
+
+  <a href="#" class="side-menu-item" data-vista="calendario">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>Calendario</span>
+  </a>
+
+  <a href="#" class="side-menu-item" data-vista="contacto">
+    <i class="fa-solid fa-address-book"></i>
+    <span>Contacto</span>
+  </a>
+
+  <a href="#" class="side-menu-item" data-vista="ajustes">
+    <i class="fa-solid fa-gear"></i>
+    <span>Configuración</span>
+  </a>
+
+  <a href="#" id="logoutMenuItem" class="side-menu-item logout-item">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    <span>Cerrar sesión</span>
+  </a>
+</nav>
+  </aside>
+
+  <main id="contenido" class="main-content"></main>
+
+  <nav class="bottom-navbar">
+    <a href="#" onclick="cargarVista('inicio')" class="nav-item" data-vista="inicio">
+      <i class="fa-solid fa-house"></i>
+      <span>Inicio</span>
+    </a>
+
+    <a href="#" onclick="cargarVista('calendario')" class="nav-item" data-vista="calendario">
+      <i class="fa-solid fa-calendar"></i>
+      <span>Calendario</span>
+    </a>
+    
+    <a href="#" onclick="cargarVista('pasemedico')" class="nav-item" data-vista="pasemedico">
+      <i class="fa-solid fa-file-medical"></i>
+      <span>Pase Especialista</span>
+    </a>
+
+    <a href="#" onclick="cargarVista('ajustes')" class="nav-item" data-vista="ajustes">
+      <i class="fa-solid fa-gear"></i>
+      <span>Ajustes</span>
+    </a>
+  </nav>
+
+  
+  <div id="logoutModal" class="logout-modal">
+    <div class="logout-modal-backdrop" onclick="cerrarModalLogout()"></div>
+
+    <div class="logout-modal-sheet">
+      <div class="logout-modal-handle"></div>
+
+      <div class="logout-modal-icon">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </div>
+
+      <h3>¿Cerrar sesión?</h3>
+      <p>Tu sesión actual se cerrará en la aplicación.</p>
+
+      <div class="logout-modal-actions">
+        <button type="button" class="logout-btn-cancel" onclick="cerrarModalLogout()">
+          Cancelar
+        </button>
+        <button type="button" class="logout-btn-confirm" onclick="confirmarLogout()">
+          Cerrar sesión
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="logoutOverlay" class="logout-overlay">
+    <div class="logout-overlay-content">
+      <div class="logout-spinner"></div>
+      <h3 id="logoutOverlayTitle">Hasta pronto</h3>
+      <p id="logoutOverlayText">Cerrando sesión...</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/qrious@4.0.2/dist/qrious.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="js/auth.min.js?v=202605081"></script>
+<script src="js/inicio.min.js?v=202605081"></script>
+<script src="js/notificaciones.min.js?v=202605081"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js"></script>
+
+<script src="js/prueba.js?v=2026050921"></script>
+<script src="js/documentos.min.js?v=202605081"></script>
+<script src="js/detalleinicio.min.js?v=202605081"></script>
+<script src="js/estudiosclinicos.min.js?v=202605081"></script>
+<script src="js/recetasmedicas.min.js?v=202605081"></script>
+<script src="js/recetadetalle.min.js?v=202605081"></script>
+<script src="js/usuario.js?v=2026050871"></script>
+<script src="js/perfil.js?v=2026050871"></script>
+<script src="js/organizacion.js?v=2026050811"></script>
+<script src="js/estadocuenta.min.js?v=202605081"></script>
+<script src="js/cajaahorro.min.js?v=202605081"></script>
+<script src="js/ajustes.min.js?v=202605081"></script>
+<script src="js/calendario.min.js?v=202605081"></script>
+<script src="js/pasemedico.min.js?v=202605081"></script>
+<script src="js/app.js?v=20260508161"></script>
+</body>
+</html>
